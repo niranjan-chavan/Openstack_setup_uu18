@@ -2,9 +2,9 @@
 
 export IMG_NAME="cirros"
 export OP_IMAGE_ID=`openstack image list --insecure --name cirros -c ID -f value`
-export NTW_NAME="private"
-export NTW_ID=`openstack network list --insecure  --name $NTW_NAME -c ID -f value | head -1`
-export FLV_ID="8b8084f8-092b-4b31-96e2-d084a4fe761a"
+export NTW_NAME="test_internal_network"
+export NTW_ID=`openstack network list --insecure  --name $NTW_NAME -c ID -f value`
+export FLV_ID="d61dd031-bf08-4ea4-9b1f-cdd3e53e524e"
 
 export OS_PROJECT_DOMAIN_ID=24d96d64958f46718d86d5c8dda08f0a
 export OS_REGION_NAME=US-WEST-2
@@ -68,7 +68,7 @@ done < <(openstack  volume type list --insecure  -c ID -c Name -f value)
   echo "Creating $INS_NAME WORKLOAD";
   workloadmgr workload-create --insecure  \
   --instance instance-id=$INS_ID  \
-  --display-name  "$INS_NAME"_Wkld  \
+  --display-name  "NC_`date +%d-%m-%Y`_WL"  \
   --display-description "Creating the workload for testing purpose"  \
   --workload-type-id f82ce76f-17fe-438b-aa37-7a023058e50d  \
   --source-platform 'openstack'  \

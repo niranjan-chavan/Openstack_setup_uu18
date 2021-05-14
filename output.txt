@@ -1,0 +1,49 @@
++-----------------------------+-------------+
+| Metadata                    | Value       |
++-----------------------------+-------------+
+| backup_media_target         | TrilioVault |
+| hostnames                   | ["TestVM"]  |
+| preferredgroup              | []          |
+| workload_approx_backup_size | 0           |
++-----------------------------+-------------+
++------------------------+-----------------------------+
+| Jobschedule            | Value                       |
++------------------------+-----------------------------+
+| appliance_timezone     | UTC                         |
+| enabled                | True                        |
+| fullbackup_interval    | -1                          |
+| global_jobscheduler    | True                        |
+| interval               | 24hr                        |
+| nextrun                | 39976.078374                |
+| retention_policy_type  | Number of Snapshots to Keep |
+| retention_policy_value | 30                          |
+| start_date             | 12/08/2020                  |
+| start_time             | 09:00 PM                    |
+| timezone               | Etc/UTC                     |
++------------------------+-----------------------------+
+created_at: '2020-12-08T08:01:16.000000'
+updated_at: '2020-12-08T09:37:25.000000'
+id: 5e4f15b0-e9f8-44e1-b918-f1de1fdd1764
+user_id: 08b2d6625b0b4698ae7653cce0cf039e
+project_id: ae15fc8189794654b7200164304a81f2
+availability_zone: nova
+workload_type_id: f82ce76f-17fe-438b-aa37-7a023058e50d
+name: workload1
+description: workload1
+interval: null
+storage_usage:
+  full:
+    snap_count: 1
+    usage: 22085632
+  incremental:
+    snap_count: 0
+    usage: 0
+  usage: 22085632
+instances:
+- id: 7074f1d8-d328-487e-b328-2c4ac8ad87e2
+  name: TestVM
+status: available
+error_msg: null
+scheduler_trust: null
+policy_id: null
+jobschedule: true

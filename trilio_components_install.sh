@@ -1,11 +1,11 @@
 #!/bin/bash
 
-export TVAULT_BRANCH="4.1OSI"
+export TVAULT_BRANCH="v4.1maintenance"
 export GIT_REPO="https://github.com/trilioData/triliovault-cfg-scripts.git"
 export CONTROLLER_IP="172.26.0.50"
 export COMPUTE_IP="172.26.0.49"
 export TVAULT_IP="192.168.11.171"
-export TVAULT_VERSION="4.1.41"
+export TVAULT_VERSION="4.1.99"
 export NFS_PATH="192.168.1.34:/mnt/tvault/tvm1"
 export BASEDIR=$(pwd)
 export NFS_OPT="nolock,soft,timeo=180,intr,lookupcache=none,nfsvers=3"
